@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #238e6b;
+  --font-family: 'Tangerine', cursive;
+}
+
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 900;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--primary-color);
+}
+
+.header > h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+.main {
+  padding: 25px 20px;
+  background: url('/image/bGroundImage.jpg') no-repeat 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#txt-input {
+  display: block;
+  width: 80%;
+  margin: auto;
+  height: 20vh;
+  font-family: var(--font-family);
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 35px;
+  color: black;
+}
+
+#btn-translate {
+  display: block;
+  margin: 10px auto;
+  font-family: var(--font-family);
+  padding: 10px 30px;
+  font-weight: bolder;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+#div-message {
+  display: block;
+  text-align: center;
+  padding: 5px 5px;
+  font-size: 30px;
+  color: white;
+}
+
+#div-output {
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+  height: 20vh;
+  width: 80%;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 35px;
+  color: black;
+  background-color: white;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.footer > p {
+  font-size: 22px;
+}
+
+.footer > small {
+  font-size: 16px;
+}
