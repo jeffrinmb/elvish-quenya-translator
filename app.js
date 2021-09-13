@@ -8,8 +8,13 @@ const divOutput = document.querySelector('#div-output');
 
 const buildURL = text => serverURL + '?text=' + text;
 
-const errorHandler = error => {
-  console.log('An Error Occured! Error:', error);
+const errorHandler = errorDetails => {
+  console.log(
+    'An Error Occured! Error Code:',
+    errorDetails.code,
+    'Error Message:',
+    errorDetails.message
+  );
   alert('An error has occured! Please try again after some time.');
 };
 
@@ -17,7 +22,11 @@ const doFetch = text => {
   fetch(buildURL(text))
     .then(response => response.json())
     .then(json => {
-      divOutput.innerText = json.contents.translated;
+      if (json.contents) {
+        divOutput.innerText = json.contents.translated;
+      } else if (json.error) {
+        throw json.error;
+      }
     })
     .catch(errorHandler);
 };
